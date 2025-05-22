@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {Navigation} from "../../components/navigation/Navigation.tsx";
-import {NameCandidate} from "../nameCandidate/NameCandidate.tsx";
+import {NameCandidate} from "./nameCandidate/NameCandidate.tsx";
 
 export const Header = () => {
     return (
