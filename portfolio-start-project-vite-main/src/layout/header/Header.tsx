@@ -17,7 +17,8 @@ const StyledHeader = styled.header`
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
-    width: 1440px;
+    padding: 12px 120px;
     height: 56px;
+    
 `
 

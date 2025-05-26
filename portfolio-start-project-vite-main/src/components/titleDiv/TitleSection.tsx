@@ -7,19 +7,20 @@ type TitleSectionPropsType ={
 export const TitleSection = (props:TitleSectionPropsType) => {
     return (
         <StyledTitleSection>
-            <h3>
+            <p>
                 {props.title}
-            </h3>
+            </p>
         </StyledTitleSection>
     );
 };
 
-const StyledTitleSection = styled.section `
+const StyledTitleSection = styled.div `
     display: flex;
     font-size: 48px;
     line-height: 1.5;
     text-align: center;
     color: #25282b;
+   
 
 
 `
