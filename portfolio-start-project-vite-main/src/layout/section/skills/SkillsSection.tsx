@@ -12,24 +12,18 @@ export const SkillsSection = () => {
     const titleProps: string = "Skills"
 
     return (
-        <FlexWrapper>
+        <FlexWrapper gap={"74px"} >
             <TitleSection title={titleProps}/>
-            <WrapperBlockSkills>
+            <SkillsSectionStyled>
             {skillsElement}
-            </WrapperBlockSkills>
+            </SkillsSectionStyled>
         </FlexWrapper>
     );
 };
 
-
-// const WrapperBox = styled.div`
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// `
-
-const WrapperBlockSkills = styled.div`
+const SkillsSectionStyled = styled.div`
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1200px;
 `
@@ -42,24 +36,5 @@ const WrapperBlockSkills = styled.div`
 //
 // `
 
-//     <Test>
-//     <TitleSection title={titleProps}/>
-// <WrapperBlockSkills>
-//     <IconItems img={vsCodeSvg} alt="VsCode"/>
-//     <IconItems img={jsSvg} alt="JS"/>
-//     <IconItems img={htmlSvg} alt="HTML"/>
-//     <IconItems img={cssSvg} alt="CSS"/>
-//     <IconItems img={greensockSvg} alt="Greensock"/>
-//     <IconItems img={reduxSvg} alt="Redux"/>
-// </WrapperBlockSkills>
-// <WrapperBlockSkills>
-//     <IconItems img={gitHubSvg} alt="GitHub"/>
-//     <IconItems img={gitSvg} alt="GIT"/>
-//     <IconItems img={reactSvg} alt="React"/>
-//     <IconItems img={sassSvg} alt="Sass"/>
-//     <IconItems img={bootstrapSvg} alt="Bootstrap"/>
-//     <IconItems img={tailwindSvg} alt="Tailwind"/>
-// </WrapperBlockSkills>
-// </Test>
 
 

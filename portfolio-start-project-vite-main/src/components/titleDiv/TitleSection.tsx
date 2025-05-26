@@ -21,6 +21,9 @@ const StyledTitleSection = styled.div `
     text-align: center;
     color: #25282b;
    
+    p{
+        margin: 0;
+    }
 
 
 `

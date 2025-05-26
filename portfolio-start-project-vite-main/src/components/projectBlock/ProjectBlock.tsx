@@ -3,28 +3,28 @@ import styled from "styled-components";
 
 type ProjectBlockPropsType = {
     nameProject:string
-    description: [string]
+    description: Array<string>
     photo?: string
 }
 
 export const ProjectBlock = (props:ProjectBlockPropsType) => {
     return (
-        <WrapperBoxStyled>
+        <ProjectBlockStyled>
             <div>
-            <h4>
+            <h3>
                 {props.nameProject}
-            </h4>
+            </h3>
             <p>
                 {props.description.join("\n")}
             </p>
             <button>View Project</button>
             </div>
             <ImgStyled src={props.photo}/>
-        </WrapperBoxStyled>
+        </ProjectBlockStyled>
     );
 };
 
-const WrapperBoxStyled = styled.div `
+const ProjectBlockStyled = styled.div `
     display: flex;
     p {
         white-space: pre-line
