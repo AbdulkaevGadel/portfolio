@@ -29,6 +29,7 @@ const MainStyled = styled.section`
     display: flex;
     gap: 50px;
     padding-left: 120px;
+    justify-content: space-between;
 
     h1 {
         color: #fdc435;

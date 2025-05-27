@@ -1,4 +1,4 @@
-import skillsSvg from "../../assets/svg/skillsSvg-sprite/skillsSvg.svg"
+import skillsSvg from "../../assets/svg/skillsSvg-sprite/svg-spite.svg"
 import styled from "styled-components";
 
 

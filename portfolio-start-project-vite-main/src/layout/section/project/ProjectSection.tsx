@@ -3,7 +3,7 @@ import {ProjectBlock} from "../../../components/projectBlock/ProjectBlock.tsx";
 import yogaPhoto from "../../../assets/images/projectWomenYoga_1.webp"
 import calendarPhoto from "../../../assets/images/calendar_1.webp"
 import mobilePhoto from "../../../assets/images/mobile_1.webp"
-import {FlexWrapper} from "../../../components/wrapperbox/FlexWrapper.tsx";
+import {FlexWrapperSection} from "../../../components/wrappers/FlexWrapperSection.tsx";
 
 
 export const ProjectSection = () => {
@@ -34,12 +34,12 @@ export const ProjectSection = () => {
 
 
     return (
-        <FlexWrapper gap={"80px"}>
+        <FlexWrapperSection gap={"80px"}>
             <TitleSection title={"Projects"}/>
             <ProjectBlock nameProject={state.project1.nameProject} description={state.project1.description} photo={state.project1.photo}/>
             <ProjectBlock nameProject={state.project2.nameProject} description={state.project2.description} photo={state.project2.photo}/>
             <ProjectBlock nameProject={state.project3.nameProject} description={state.project3.description} photo={state.project3.photo}/>
-        </FlexWrapper>
+        </FlexWrapperSection>
     );
 };
 

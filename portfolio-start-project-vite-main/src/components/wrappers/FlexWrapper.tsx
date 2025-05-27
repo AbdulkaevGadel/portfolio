@@ -16,7 +16,7 @@ type FlexWrapperPropsSType = {
 }
 
 
-export const FlexWrapper = styled.section <FlexWrapperPropsSType>`
+export const FlexWrapper = styled.div <FlexWrapperPropsSType>`
     display: flex;
     flex-direction: ${ props=>props.direction || "column"};
     align-items: ${ props=>props.aItems || "center"};

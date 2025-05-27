@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {FlexWrapper} from "../wrappers/FlexWrapper.tsx";
 
 
 type ProjectBlockPropsType = {
@@ -10,7 +11,7 @@ type ProjectBlockPropsType = {
 export const ProjectBlock = (props:ProjectBlockPropsType) => {
     return (
         <ProjectBlockStyled>
-            <div>
+            <FlexWrapper aItems={"none"}>
             <h3>
                 {props.nameProject}
             </h3>
@@ -18,7 +19,7 @@ export const ProjectBlock = (props:ProjectBlockPropsType) => {
                 {props.description.join("\n")}
             </p>
             <button>View Project</button>
-            </div>
+            </FlexWrapper>
             <ImgStyled src={props.photo}/>
         </ProjectBlockStyled>
     );
@@ -26,6 +27,8 @@ export const ProjectBlock = (props:ProjectBlockPropsType) => {
 
 const ProjectBlockStyled = styled.div `
     display: flex;
+    gap:50px;
+    background-color: #ffffff;
     p {
         white-space: pre-line
     }
