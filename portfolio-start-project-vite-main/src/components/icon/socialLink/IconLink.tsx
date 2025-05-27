@@ -12,7 +12,7 @@ export const IconLink = (props: IconLinkPropsType) => {
     return (
         <IconLi>
         <IconLinkStyled>
-            <IconItemsStyled width={props.width} height={props.height} viewBox={props.viewBox} fill="none" xmlns="http://www.w3.org/2000/svg">
+            <IconItemsStyled href={"#"} width={props.width} height={props.height} viewBox={props.viewBox} fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use href={`${socialSvg}#${props.iconId}`}/>
             </IconItemsStyled>
         </IconLinkStyled>
@@ -21,6 +21,7 @@ export const IconLink = (props: IconLinkPropsType) => {
 };
 
 const IconLinkStyled = styled.a`
+    cursor: pointer;
 `
 const IconItemsStyled = styled.svg `
     `
