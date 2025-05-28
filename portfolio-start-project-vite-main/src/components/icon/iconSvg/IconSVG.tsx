@@ -17,5 +17,5 @@ export const IconSvg = (props:IconLinkPropsType) => {
 };
 
 const IconStyled = styled.svg `
-    object-fit: cover;
+  
 `
