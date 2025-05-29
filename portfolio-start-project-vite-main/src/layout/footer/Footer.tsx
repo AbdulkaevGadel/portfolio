@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {IconLink} from "../../components/icon/socialLink/IconLink.tsx";
 import {IconSvg} from "../../components/icon/iconSvg/IconSVG.tsx";
+import {Container} from "../../components/container/Container.tsx";
 
 
 export const Footer = () => {
@@ -12,10 +13,12 @@ export const Footer = () => {
 
     return (
         <FooterStyled>
+            <Container>
             <ListOfSocial>
                     {socialElement}
             </ListOfSocial>
             <Copyright>Madelyn Torff 2021 </Copyright>
+            </Container>
             <IconSvg iconId={"yellowWave"}  width={"100%"} height={"344"} viewBox={"0 0 1440 344"}/>
         </FooterStyled>
     );

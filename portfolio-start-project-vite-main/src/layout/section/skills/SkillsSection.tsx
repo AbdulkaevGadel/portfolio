@@ -2,6 +2,7 @@ import {TitleSection} from "../../../components/titleDiv/TitleSection.tsx";
 import {FlexWrapperSection} from "../../../components/wrappers/FlexWrapperSection.tsx";
 import {Skills} from "../../../components/skills/Skills.tsx";
 import styled from "styled-components";
+import {Container} from "../../../components/container/Container.tsx";
 
 export const SkillsSection = () => {
 
@@ -13,10 +14,12 @@ export const SkillsSection = () => {
 
     return (
         <FlexWrapperSection gap={"74px"} >
+            <Container>
             <TitleSection title={titleProps}/>
             <SkillsSectionStyled>
             {skillsElement}
             </SkillsSectionStyled>
+            </Container>
         </FlexWrapperSection>
     );
 };

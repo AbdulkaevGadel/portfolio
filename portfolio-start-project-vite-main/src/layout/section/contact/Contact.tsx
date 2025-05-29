@@ -1,10 +1,12 @@
 import {FlexWrapperSection} from "../../../components/wrappers/FlexWrapperSection.tsx";
 import {TitleSection} from "../../../components/titleDiv/TitleSection.tsx";
 import styled from "styled-components";
+import {Container} from "../../../components/container/Container.tsx";
 
 export const Contact = () => {
     return (
         <FlexWrapperSection>
+            <Container>
             <TitleSection title="Contact"/>
             <FormStyled>
                 <Field/>
@@ -12,6 +14,7 @@ export const Contact = () => {
                 <Field as={"textarea"}/>
                 <button type={"submit"}>Send</button>
             </FormStyled>
+            </Container>
         </FlexWrapperSection>
     );
 };

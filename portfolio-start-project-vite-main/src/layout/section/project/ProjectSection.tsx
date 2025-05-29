@@ -4,6 +4,7 @@ import yogaPhoto from "../../../assets/images/projectWomenYoga_1.webp"
 import calendarPhoto from "../../../assets/images/calendar_1.webp"
 import mobilePhoto from "../../../assets/images/mobile_1.webp"
 import {FlexWrapperSection} from "../../../components/wrappers/FlexWrapperSection.tsx";
+import {Container} from "../../../components/container/Container.tsx";
 
 
 export const ProjectSection = () => {
@@ -35,10 +36,12 @@ export const ProjectSection = () => {
 
     return (
         <FlexWrapperSection gap={"80px"}>
+            <Container>
             <TitleSection title={"Projects"}/>
             <ProjectBlock nameProject={state.project1.nameProject} description={state.project1.description} photo={state.project1.photo}/>
             <ProjectBlock nameProject={state.project2.nameProject} description={state.project2.description} photo={state.project2.photo}/>
             <ProjectBlock nameProject={state.project3.nameProject} description={state.project3.description} photo={state.project3.photo}/>
+            </Container>
         </FlexWrapperSection>
     );
 };

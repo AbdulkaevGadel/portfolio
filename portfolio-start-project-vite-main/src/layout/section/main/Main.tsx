@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import avatarImg from "../../../assets/images/avatar_1.webp"
+import {Container} from "../../../components/container/Container.tsx";
 
 export const Main = () => {
 
 
     return (
         <MainStyled>
+            <Container>
             <AboutMe>
                 <h1>Software Developer</h1>
                 <h2>Hello, my name {"\n"} is Vahid Navazan</h2>
@@ -20,6 +22,7 @@ export const Main = () => {
             <Avatar>
                 <img src={avatarImg} alt="avatar"/>
             </Avatar>
+            </Container>
         </MainStyled>
     );
 };
@@ -28,7 +31,7 @@ export const Main = () => {
 const MainStyled = styled.section`
     display: flex;
     gap: 50px;
-    padding-left: 120px;
+    //padding-left: 120px;
     justify-content: space-between;
 
     h1 {
