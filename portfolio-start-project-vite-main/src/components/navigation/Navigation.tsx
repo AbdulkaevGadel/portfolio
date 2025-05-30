@@ -28,11 +28,17 @@ export const Navigation = () => {
 
 
 const StyledNavigation = styled.nav<StyledNavigationPropsType>`
+
+    font-family: "Raleway", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    
     ul {
         display: flex;
         align-items: ${props => props.alignI || "flex-start"};
         justify-content: ${props => props.justifyC || "flex-start"};
         flex-direction: ${props => props.direction || "row"};
         gap: ${props=>props.gap || "0"};
+        padding: 14px 0;
     }
 `

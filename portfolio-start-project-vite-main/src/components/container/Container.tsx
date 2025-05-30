@@ -19,6 +19,7 @@ type ContainerPropsType = {
     aItems?: string
     jItems?: string
     rGap?: string
+    position?: string
 
 }
 
@@ -33,6 +34,7 @@ type ContainerPropsType = {
      border: 1px solid red;
      display: ${props => props.displayF || undefined};
      flex-direction: ${props => props.direction || undefined};
-     justify-content: ${props => props.jContent || undefined};;
+     justify-content: ${props => props.jContent || undefined};
+     position: ${props => props.position || undefined};
 
  `

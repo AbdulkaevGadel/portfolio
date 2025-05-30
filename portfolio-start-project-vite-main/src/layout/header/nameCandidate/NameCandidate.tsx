@@ -10,5 +10,8 @@ export const NameCandidate = () => {
 
 
 const StyledNameCandidate = styled.div`
-
+    font-family: "Comfortaa", sans-serif;
+    font-size: 18px;
+    line-height: 1.8;
+    padding: 12px 0;
 `

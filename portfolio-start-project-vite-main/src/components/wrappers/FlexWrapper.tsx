@@ -12,15 +12,19 @@ type FlexWrapperPropsSType = {
     aItems?: string
     jItems?: string
     rGap?: string
+    minH?: string
+    flex?: string
 
 }
 
 
 export const FlexWrapper = styled.div <FlexWrapperPropsSType>`
     display: flex;
-    flex-direction: ${ props=>props.direction || "column"};
-    align-items: ${ props=>props.aItems || "center"};
-    justify-content: ${ props=>props.jContent || "center"};
+    flex-direction: ${ props=>props.direction || undefined};
+    align-items: ${ props=>props.aItems || undefined};
+    justify-content: ${ props=>props.jContent || undefined};
     row-gap: ${props =>props.rGap};
-    gap:${props =>props.gap}
+    gap:${props =>props.gap};
+    min-height: ${props =>props.minH || undefined};
+    flex-grow: ${props =>props.flex || undefined};
 `

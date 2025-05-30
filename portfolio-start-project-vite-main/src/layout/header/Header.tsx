@@ -15,13 +15,23 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
+    position: fixed;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
     //padding: 12px 120px;
-    height: 56px;
+    max-height: 56px;
+    height: 100%;
+    z-index: 100;
+
+  
+    
     
 `
 
