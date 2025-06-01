@@ -31,7 +31,7 @@ type ContainerPropsType = {
      min-height: 100%;
      padding: ${props => props.padding || "0 15px"};
      margin: 0 auto;
-     border: 1px solid red;
+     outline: 1px solid red;
      display: ${props => props.displayF || undefined};
      flex-direction: ${props => props.direction || undefined};
      justify-content: ${props => props.jContent || undefined};

@@ -27,8 +27,8 @@ export const ProjectBlock = (props:ProjectBlockPropsType) => {
 
 const ProjectBlockStyled = styled.div `
     display: flex;
-    gap:50px;
     background-color: #ffffff;
+    margin-bottom: 80px;
     p {
         white-space: pre-line
     }

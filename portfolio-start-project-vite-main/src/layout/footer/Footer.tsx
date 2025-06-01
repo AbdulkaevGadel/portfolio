@@ -30,6 +30,11 @@ const FooterStyled = styled.footer`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    section {
+        margin-bottom:0;
+    }
+    
 `
 
 const ListOfSocial = styled.ul`

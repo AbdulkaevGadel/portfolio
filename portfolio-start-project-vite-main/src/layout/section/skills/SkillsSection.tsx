@@ -29,6 +29,7 @@ const SkillsSectionStyled = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1200px;
+    row-gap: 75px;
 `
 //
 // const WrapperSkills = styled.div`

@@ -5,7 +5,7 @@ import {Container} from "../../../components/container/Container.tsx";
 
 export const Contact = () => {
     return (
-        <FlexWrapperSection>
+        <FlexWrapperSection marginB={"55px"}>
             <Container>
             <TitleSection title="Contact"/>
             <FormStyled>

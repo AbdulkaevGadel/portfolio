@@ -12,6 +12,7 @@ type FlexWrapperSectionPropsSType = {
     aItems?: string
     jItems?: string
     rGap?: string
+    marginB?: string
 
 }
 
@@ -22,5 +23,8 @@ export const FlexWrapperSection = styled.section <FlexWrapperSectionPropsSType>`
     align-items: ${ props=>props.aItems || "center"};
     justify-content: ${ props=>props.jContent || "center"};
     row-gap: ${props =>props.rGap};
-    gap:${props =>props.gap}
+    gap:${props =>props.gap};
+    margin-bottom: ${props => props.marginB || "145px"} ;
+    
+    
 `

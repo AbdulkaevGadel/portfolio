@@ -25,10 +25,13 @@ const StyledHeader = styled.header`
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
-    //padding: 12px 120px;
     max-height: 56px;
     height: 100%;
     z-index: 100;
+    
+    section {
+        margin-bottom:0;
+    }
 
   
     

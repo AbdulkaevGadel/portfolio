@@ -41,6 +41,7 @@ const MainStyled = styled.section`
     h1 {
         color: ${theme.colors.accent};
         margin-bottom: 12px;
+        font-size: 20px;
     }
 
     button {

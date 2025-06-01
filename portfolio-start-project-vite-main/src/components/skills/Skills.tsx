@@ -9,7 +9,7 @@ type SkillPropsType = {
 
 export const Skills = (props: SkillPropsType) => {
     return (
-        <SkillsStyled width="121" height="120" viewBox="0 0 121 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <SkillsStyled width="120" height="120"  xmlns="http://www.w3.org/2000/svg">
             <use xlinkHref={`${skillsSvg}#${props.iconID}`}/>
         </SkillsStyled>
     );
