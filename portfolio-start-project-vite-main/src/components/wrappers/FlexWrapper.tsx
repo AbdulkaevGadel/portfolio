@@ -14,6 +14,8 @@ type FlexWrapperPropsSType = {
     rGap?: string
     minH?: string
     flex?: string
+    minW?: string
+    maxW?: string
 
 }
 
@@ -27,4 +29,6 @@ export const FlexWrapper = styled.div <FlexWrapperPropsSType>`
     gap:${props =>props.gap};
     min-height: ${props =>props.minH || undefined};
     flex-grow: ${props =>props.flex || undefined};
+    min-width: ${props =>props.minW || undefined};
+    max-width: ${props =>props.minW || undefined};
 `

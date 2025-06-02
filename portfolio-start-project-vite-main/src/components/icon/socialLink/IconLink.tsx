@@ -12,7 +12,7 @@ export const IconLink = (props: IconLinkPropsType) => {
     return (
         <IconLi>
         <IconLinkStyled href={"#"}>
-            <IconItemsStyled  width={props.width} height={props.height} viewBox={props.viewBox} fill="none" xmlns="http://www.w3.org/2000/svg">
+            <IconItemsStyled  width={props.width} height={props.height} xmlns="http://www.w3.org/2000/svg">
                 <use href={`${socialSvg}#${props.iconId}`}/>
             </IconItemsStyled>
         </IconLinkStyled>

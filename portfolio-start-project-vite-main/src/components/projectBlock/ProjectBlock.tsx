@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {FlexWrapper} from "../wrappers/FlexWrapper.tsx";
+import {theme} from "../../styles/theme/Theme.ts";
 
 
 type ProjectBlockPropsType = {
@@ -11,16 +12,18 @@ type ProjectBlockPropsType = {
 export const ProjectBlock = (props:ProjectBlockPropsType) => {
     return (
         <ProjectBlockStyled>
-            <FlexWrapper aItems={"none"}>
-            <h3>
-                {props.nameProject}
-            </h3>
-            <p>
-                {props.description.join("\n")}
-            </p>
-            <button>View Project</button>
-            </FlexWrapper>
             <ImgStyled src={props.photo}/>
+            <FlexWrapper direction={"column"} jContent={"center"}  minW={"495px"} >
+                <DescriptionStyled>
+                    <h3>
+                        {props.nameProject}
+                    </h3>
+                    <p>
+                        {props.description}
+                    </p>
+                    <button>View Project</button>
+                </DescriptionStyled>
+            </FlexWrapper>
         </ProjectBlockStyled>
     );
 };
@@ -29,13 +32,76 @@ const ProjectBlockStyled = styled.div `
     display: flex;
     background-color: #ffffff;
     margin-bottom: 80px;
+    max-height: 525px;
+    border-radius: 24px;
+    overflow: hidden;
+    max-width: 990px;
+    
+
+    &:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    
     p {
-        white-space: pre-line
+        white-space: pre-line;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.5;
+        color: ${theme.colors.fontSecondary};
+    }
+    
+    h3 {
+        font-family: "Playfair Display", sans-serif;
+        font-size: 40px;
+        line-height: 1.5;
+        color: ${theme.colors.fontPrimary};
+    }
+    
+    button {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        border: 1px solid ${theme.colors.fontPrimary};
+        border-radius: 24px;
+        padding: 8px 24px;
+        width: 150px;
+        height: 43px;
+        font-size: 17px;
+        line-height: 1.5;
+        min-width: 150px;
+        min-height: 43px;
+        background-color: white;
+        color: ${theme.colors.fontPrimary};
+
+        overflow: hidden;
+
+        &:hover {
+            background-color: ${theme.colors.accent};
+            cursor: pointer;
+        }
+
+        &:active {
+            background-color: white;
+        }
+        
     }
 
 `
 
+const DescriptionStyled = styled.div `
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    max-width: 405px;
+    min-height: 520px;
+    padding-left: 50px;
+
+`
+
 const ImgStyled =styled.img `
-    width: 490px;
-    height: 520;
+    min-width: 495px;
+    min-height: 520px;
+    max-height: 525px;
+    object-fit: cover
 `

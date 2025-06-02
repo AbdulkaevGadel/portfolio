@@ -49,6 +49,27 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
     }
     
+    label {
+        font-size: 16px;
+        color: ${theme.colors.fontPrimary};
+        margin-bottom: 8px;
+        
+    }
+    
+    input {
+        min-height: 40px;
+        margin-bottom: 24px;
+        border: 1px solid #e8ecf4;
+        border-radius: 8px;
+    }
+    
+    textarea {
+        min-height: 160px;
+        margin-bottom: 24px;
+        border: 1px solid #e8ecf4;
+        border-radius: 8px;
+        resize: none;
+    }
     
     
 `

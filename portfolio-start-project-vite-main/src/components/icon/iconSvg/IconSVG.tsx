@@ -10,7 +10,7 @@ type IconLinkPropsType = {
 
 export const IconSvg = (props:IconLinkPropsType) => {
     return (
-        <IconStyled width={props.width} height={props.height} viewBox={props.viewBox} fill="none" xmlns="http://www.w3.org/2000/svg">
+        <IconStyled width={props.width} height={props.height} viewBox={props.viewBox} fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
             <use href={`${socialSvg}#${props.iconId}`}/>
         </IconStyled>
     );

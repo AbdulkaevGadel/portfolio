@@ -2,18 +2,22 @@ import {FlexWrapperSection} from "../../../components/wrappers/FlexWrapperSectio
 import {TitleSection} from "../../../components/titleDiv/TitleSection.tsx";
 import styled from "styled-components";
 import {Container} from "../../../components/container/Container.tsx";
+import {theme} from "../../../styles/theme/Theme.ts";
 
 export const Contact = () => {
     return (
-        <FlexWrapperSection marginB={"55px"}>
-            <Container>
+        <FlexWrapperSection marginB={"0"}>
+            <Container displayF={"flex"} direction={"column"} rGap={"wrap"} aItems={"center"}>
             <TitleSection title="Contact"/>
-            <FormStyled>
-                <Field/>
-                <Field/>
-                <Field as={"textarea"}/>
-                <button type={"submit"}>Send</button>
-            </FormStyled>
+                <FormStyled>
+                    <label htmlFor="name">Name</label>
+                    <Field id="name"/>
+                    <label htmlFor="email">Email</label>
+                    <Field id="email"/>
+                    <label htmlFor="message">Message</label>
+                    <Field as={"textarea"} id = "message"/>
+                    <button type={"submit"}>Send</button>
+                </FormStyled>
             </Container>
         </FlexWrapperSection>
     );
@@ -25,7 +29,9 @@ const FormStyled = styled.form `
     width: 100%;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 24px;
+    margin-bottom: 125px;
+    
+    position: relative;
 
     button {
         border-radius: 8px;
@@ -33,8 +39,17 @@ const FormStyled = styled.form `
         width: 90px;
         height: 40px;
         margin: 0 auto;
+        background-color: ${theme.colors.accent};
+
+        position: absolute;
+        left: 82%;
+        top: 100%;
     
     }
+    
+    //textarea {
+    //    
+    //}
 
 
 `

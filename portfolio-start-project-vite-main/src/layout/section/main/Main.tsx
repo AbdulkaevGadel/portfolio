@@ -55,6 +55,7 @@ const MainStyled = styled.section`
         &:hover {
             background-color: white;
             cursor: pointer;
+            border: 2px solid ${theme.colors.fontPrimary};
         }
 
         &:active {

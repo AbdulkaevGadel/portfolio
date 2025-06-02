@@ -2,18 +2,18 @@ import styled from "styled-components";
 import {IconLink} from "../../components/icon/socialLink/IconLink.tsx";
 import {IconSvg} from "../../components/icon/iconSvg/IconSVG.tsx";
 import {Container} from "../../components/container/Container.tsx";
+import {theme} from "../../styles/theme/Theme.ts";
 
 
 export const Footer = () => {
 
-    const socialContact = ["in", "instagram", "mail"]
+    const socialContact = [ "instagram","in", "mail"]
 
-    const socialElement = socialContact.map((s) => <IconLink iconId={s} width={"38"} height={"39"}
-                                                             viewBox={"0 0 42 33"}/>)
+    const socialElement = socialContact.map((s) => <IconLink iconId={s} width={"40"} height={"40"}/>)
 
     return (
         <FooterStyled>
-            <Container>
+            <Container displayF={"flex"} direction={"column"} aItems={"center"}>
             <ListOfSocial>
                     {socialElement}
             </ListOfSocial>
@@ -39,11 +39,14 @@ const FooterStyled = styled.footer`
 
 const ListOfSocial = styled.ul`
     display: flex;
-    gap:30px;
+    gap:25px;
+    margin-bottom: 30px;
 `
 
 const Copyright = styled.small`
-
+    font-weight: 400;
+    font-size: 16px;
+    color: ${theme.colors.fontSecondary};
 `
 
 

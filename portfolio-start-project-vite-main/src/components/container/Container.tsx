@@ -25,7 +25,6 @@ type ContainerPropsType = {
 
 
  export const Container = styled.div<ContainerPropsType> `
-
      max-width: ${props => props.maxW || "1230px"};
      width: 100%;
      min-height: 100%;
@@ -35,6 +34,7 @@ type ContainerPropsType = {
      display: ${props => props.displayF || undefined};
      flex-direction: ${props => props.direction || undefined};
      justify-content: ${props => props.jContent || undefined};
+     align-items: ${props => props.aItems || undefined};
      position: ${props => props.position || undefined};
 
  `
