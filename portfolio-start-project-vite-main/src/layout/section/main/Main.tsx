@@ -13,7 +13,7 @@ export const Main = () => {
                 <FlexWrapper minH={"370px"} flex={"1"} display={"flex"} direction={"column"} jContent={"center"} >
                 <AboutMe>
                     <h1>SOFTWARE DEVELOPER</h1>
-                    <h2>Hello, my name {"\n"} is Vahid Navazan</h2>
+                    <h2>Hello, my name is Vahid Navazan</h2>
                     <p>Short text with details about you, what you
                         do or your professional career. You can add
                         more information on the about page.</p>
@@ -42,6 +42,14 @@ const MainStyled = styled.section`
         color: ${theme.colors.accent};
         margin-bottom: 12px;
         font-size: 20px;
+    }
+    
+    h2 {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 1.2;
+        color: #333;
+        max-width: 508px;
     }
 
     button {

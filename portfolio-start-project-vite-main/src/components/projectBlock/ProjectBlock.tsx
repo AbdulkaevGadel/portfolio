@@ -1,19 +1,18 @@
 import styled from "styled-components";
-import {FlexWrapper} from "../wrappers/FlexWrapper.tsx";
 import {theme} from "../../styles/theme/Theme.ts";
 
 
 type ProjectBlockPropsType = {
-    nameProject:string
+    nameProject: string
     description: Array<string>
     photo?: string
 }
 
-export const ProjectBlock = (props:ProjectBlockPropsType) => {
+export const ProjectBlock = (props: ProjectBlockPropsType) => {
     return (
         <ProjectBlockStyled>
             <ImgStyled src={props.photo}/>
-            <FlexWrapper direction={"column"} jContent={"center"}  minW={"495px"} >
+            <FlexWrapperDescriptionStyled>
                 <DescriptionStyled>
                     <h3>
                         {props.nameProject}
@@ -23,25 +22,26 @@ export const ProjectBlock = (props:ProjectBlockPropsType) => {
                     </p>
                     <button>View Project</button>
                 </DescriptionStyled>
-            </FlexWrapper>
+            </FlexWrapperDescriptionStyled>
         </ProjectBlockStyled>
     );
 };
 
-const ProjectBlockStyled = styled.div `
+const ProjectBlockStyled = styled.div`
     display: flex;
     background-color: #ffffff;
     margin-bottom: 80px;
     max-height: 525px;
     border-radius: 24px;
     overflow: hidden;
-    max-width: 990px;
-    
+    max-width: 992px;
+    justify-content: space-between;
+
 
     &:nth-child(even) {
         flex-direction: row-reverse;
     }
-    
+
     p {
         white-space: pre-line;
         font-weight: 400;
@@ -49,14 +49,14 @@ const ProjectBlockStyled = styled.div `
         line-height: 1.5;
         color: ${theme.colors.fontSecondary};
     }
-    
+
     h3 {
         font-family: "Playfair Display", sans-serif;
         font-size: 40px;
         line-height: 1.5;
         color: ${theme.colors.fontPrimary};
     }
-    
+
     button {
         font-family: "Roboto", sans-serif;
         font-weight: 500;
@@ -82,26 +82,66 @@ const ProjectBlockStyled = styled.div `
         &:active {
             background-color: white;
         }
-        
+
     }
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        max-width: 345px;
+
+        &:nth-child(even) {
+            flex-direction: column;
+        }
+
+
 
 `
 
-const DescriptionStyled = styled.div `
+const FlexWrapperDescriptionStyled = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    min-width: 495px;
+
+    @media (max-width: 1000px) {
+        max-width: 345px;
+        min-width: 0;
+    }
+
+
+
+`
+
+const DescriptionStyled = styled.div`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     gap: 24px;
-    max-width: 405px;
+    max-width: 496px;
     min-height: 520px;
     padding-left: 50px;
 
+    @media (max-width: 1000px) {
+        max-width: 345px;
+    }
+
 `
 
-const ImgStyled =styled.img `
-    min-width: 495px;
+const ImgStyled = styled.img`
+    min-width: 496px;
     min-height: 520px;
     max-height: 525px;
-    object-fit: cover
+    object-fit: cover;
+
+    @media (max-width: 1000px) {
+        max-width: 345px;
+        min-width: 0;
+    }
+
+
 `

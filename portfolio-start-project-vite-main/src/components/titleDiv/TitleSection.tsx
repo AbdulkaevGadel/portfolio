@@ -25,6 +25,7 @@ const StyledTitleSection = styled.div `
     
    
     p{
+        font-weight: 700;
         font-size: 48px;
         line-height: 1.5;
         text-align: center;

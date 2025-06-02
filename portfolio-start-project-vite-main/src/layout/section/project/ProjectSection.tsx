@@ -53,7 +53,7 @@ export const ProjectSection = () => {
 
 const ProjectSectionStyled = styled.div `
     display: flex;
-    max-width: 990px;
+    max-width: 992px;
     flex-direction: column;
     
 `

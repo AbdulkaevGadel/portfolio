@@ -47,6 +47,12 @@ export const GlobalStyle = createGlobalStyle`
     
     p{
         margin: 0;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.5;
+        color: ${theme.colors.fontSecondary};
+
+        
     }
     
     label {
