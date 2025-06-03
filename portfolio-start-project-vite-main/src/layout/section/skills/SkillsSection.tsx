@@ -25,11 +25,23 @@ export const SkillsSection = () => {
 };
 
 const SkillsSectionStyled = styled.div`
+    //display: flex;
+    //flex-wrap: wrap;
+    //justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
     justify-content: space-between;
+    flex-direction: row;
     max-width: 1200px;
     row-gap: 75px;
+
+    @media (max-width: 1000px) {
+        padding: 0 20px;
+        min-width: 345px;
+        
+    }
+
 `
 //
 // const WrapperSkills = styled.div`

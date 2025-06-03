@@ -48,6 +48,11 @@ const ProjectBlockStyled = styled.div`
         font-size: 18px;
         line-height: 1.5;
         color: ${theme.colors.fontSecondary};
+
+        @media (max-width: 1000px) {
+            min-width: 282px;
+        }
+        
     }
 
     h3 {
@@ -90,6 +95,7 @@ const ProjectBlockStyled = styled.div`
         flex-wrap: wrap;
 
         max-width: 345px;
+        max-height: none;
 
         &:nth-child(even) {
             flex-direction: column;
@@ -108,8 +114,8 @@ const FlexWrapperDescriptionStyled = styled.div`
     min-width: 495px;
 
     @media (max-width: 1000px) {
-        max-width: 345px;
-        min-width: 0;
+        max-width: 0;
+        min-width:0;
     }
 
 
@@ -127,7 +133,14 @@ const DescriptionStyled = styled.div`
     padding-left: 50px;
 
     @media (max-width: 1000px) {
-        max-width: 345px;
+        min-width: 0;
+        max-height: 282px;
+        padding-left: 35px;
+        display: flex;
+        gap: 24px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
 `

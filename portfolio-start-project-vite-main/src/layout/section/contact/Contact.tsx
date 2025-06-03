@@ -34,6 +34,11 @@ const FormStyled = styled.form `
     position: relative;
 
     button {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.5;
+        color:${theme.colors.fontPrimary};
         border-radius: 8px;
         padding: 8px 24px 8px 24px;
         width: 90px;
@@ -44,6 +49,12 @@ const FormStyled = styled.form `
         position: absolute;
         left: 82%;
         top: 100%;
+        
+        @media (max-width: 512px) {
+            position: absolute;
+            left: 74%;
+            top: 100%;
+        }
     
     }
     
