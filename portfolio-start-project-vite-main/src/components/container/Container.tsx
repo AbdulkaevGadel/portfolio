@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../styles/theme/Theme.ts";
 
 
 type ContainerPropsType = {
@@ -29,12 +30,16 @@ type ContainerPropsType = {
      width: 100%;
      min-height: 100%;
      padding: ${props => props.padding || "0 15px"};
-     margin: 0 auto;
      outline: 1px solid red;
      display: ${props => props.displayF || undefined};
      flex-direction: ${props => props.direction || undefined};
      justify-content: ${props => props.jContent || undefined};
      align-items: ${props => props.aItems || undefined};
      position: ${props => props.position || undefined};
+     
+     // @media ${theme.media.tablet} {
+     //     width: 100%;
+     //     justify-content: center;
+     // }
 
  `

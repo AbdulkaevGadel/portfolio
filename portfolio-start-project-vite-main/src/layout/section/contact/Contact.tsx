@@ -43,8 +43,18 @@ const FormStyled = styled.form `
         padding: 8px 24px 8px 24px;
         width: 90px;
         height: 40px;
-        margin: 0 auto;
+        margin: 0;
         background-color: ${theme.colors.accent};
+
+        &:hover {
+            background-color: white;
+            cursor: pointer;
+            border: 2px solid ${theme.colors.fontPrimary};
+        }
+
+        &:active {
+            background-color: white;
+        }
 
         position: absolute;
         left: 82%;
@@ -58,9 +68,6 @@ const FormStyled = styled.form `
     
     }
     
-    //textarea {
-    //    
-    //}
 
 
 `

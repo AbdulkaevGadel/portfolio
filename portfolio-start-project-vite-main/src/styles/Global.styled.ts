@@ -41,7 +41,6 @@ export const GlobalStyle = createGlobalStyle`
     
     button {
         border: none;
-        background-color: red;
         
     }
     
@@ -75,6 +74,10 @@ export const GlobalStyle = createGlobalStyle`
         border: 1px solid #e8ecf4;
         border-radius: 8px;
         resize: none;
+    }
+
+    section {
+        margin-bottom:145px;
     }
     
     

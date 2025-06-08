@@ -1,12 +1,6 @@
 import styled from "styled-components";
-
-type StyledNavigationPropsType = {
-    alignI?: string
-    justifyC?: string
-    direction?: string
-    gap?: string
-
-}
+import {StyledNavigationPropsType} from "../../types/types.ts";
+import {theme} from "../../styles/theme/Theme.ts";
 
 export const Navigation = () => {
     return (
@@ -40,5 +34,9 @@ const StyledNavigation = styled.nav<StyledNavigationPropsType>`
         flex-direction: ${props => props.direction || "row"};
         gap: ${props=>props.gap || "0"};
         padding: 14px 0;
+    }
+    
+    @media ${theme.media.mobile} {
+        display: none;
     }
 `

@@ -12,7 +12,7 @@ export const ProjectBlock = (props: ProjectBlockPropsType) => {
     return (
         <ProjectBlockStyled>
             <ImgStyled src={props.photo}/>
-            <FlexWrapperDescriptionStyled>
+            {/*<FlexWrapperDescriptionStyled>*/}
                 <DescriptionStyled>
                     <h3>
                         {props.nameProject}
@@ -22,7 +22,7 @@ export const ProjectBlock = (props: ProjectBlockPropsType) => {
                     </p>
                     <button>View Project</button>
                 </DescriptionStyled>
-            </FlexWrapperDescriptionStyled>
+            {/*</FlexWrapperDescriptionStyled>*/}
         </ProjectBlockStyled>
     );
 };
@@ -104,23 +104,23 @@ const ProjectBlockStyled = styled.div`
 
 
 `
-
-const FlexWrapperDescriptionStyled = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-
-    min-width: 495px;
-
-    @media (max-width: 1000px) {
-        max-width: 0;
-        min-width:0;
-    }
-
-
-
-`
+//
+// const FlexWrapperDescriptionStyled = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//
+//
+//     min-width: 495px;
+//
+//     @media (max-width: 1000px) {
+//         max-width: 0;
+//         min-width:0;
+//     }
+//
+//
+//
+// `
 
 const DescriptionStyled = styled.div`
     display: flex;

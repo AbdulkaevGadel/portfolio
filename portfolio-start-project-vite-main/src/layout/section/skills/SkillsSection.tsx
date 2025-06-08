@@ -3,6 +3,7 @@ import {FlexWrapperSection} from "../../../components/wrappers/FlexWrapperSectio
 import {Skills} from "../../../components/skills/Skills.tsx";
 import styled from "styled-components";
 import {Container} from "../../../components/container/Container.tsx";
+import {theme} from "../../../styles/theme/Theme.ts";
 
 export const SkillsSection = () => {
 
@@ -25,9 +26,6 @@ export const SkillsSection = () => {
 };
 
 const SkillsSectionStyled = styled.div`
-    //display: flex;
-    //flex-wrap: wrap;
-    //justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -36,9 +34,14 @@ const SkillsSectionStyled = styled.div`
     max-width: 1200px;
     row-gap: 75px;
 
-    @media (max-width: 1000px) {
-        padding: 0 20px;
-        min-width: 345px;
+    @media ${theme.media.tablet} {
+        justify-content: flex-start;
+        
+    }
+    
+    @media ${theme.media.mobile} {
+
+        justify-content: space-between;
         
     }
 
