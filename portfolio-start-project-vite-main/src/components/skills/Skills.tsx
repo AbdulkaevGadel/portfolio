@@ -16,9 +16,9 @@ export const Skills = (props: SkillPropsType) => {
 };
 
 const SkillsStyled = styled.svg `
-    width: 16.6%;
-    min-height: 120px;
-    min-width: 120px;
+    //width: 16.6%;
+    max-height: 120px;
+    max-width: 120px;
     
 `
 

@@ -50,12 +50,13 @@ const MainStyled = styled.section`
 
     h2 {
         font-weight: 700;
+        //font-size: calc( (100vw - 375px)/(1440 - 375) * (64 - 42) + 42px);
         font-size: 64px;
         line-height: 1.2;
         color: #333;
         max-width: 508px;
         
-        @media ${theme.media.mobile} {
+        @media ${theme.media.tablet} {
             font-size: 42px;
         }
         
@@ -102,6 +103,7 @@ const WrapperReversStyled = styled.div `
 
 const AboutMe = styled.div`
     white-space: pre-line;
+    
 
     p {
         padding: 32px 0;
@@ -109,6 +111,10 @@ const AboutMe = styled.div`
         font-size: 24px;
         line-height: 1.5;
         color: ${theme.colors.fontSecondary}
+    }
+    
+    @media screen and (max-width: 900px) {
+        padding-top: 480px;
     }
 
 `
@@ -118,16 +124,14 @@ const Avatar = styled.div`
 
     position: absolute;
     max-height: 720px;
-    min-width: 630px;
     flex: 1;
     display: flex;
     justify-content: flex-end;
     top: -110px;
     border: 1px solid;
-    right: 0;
+    right: -16px;
 
     @media ${theme.media.tablet} {
-        position: static;
         margin-bottom: 50px;
     }
 
@@ -141,11 +145,8 @@ const Avatar = styled.div`
         mask-repeat: no-repeat;
         mask-position: left bottom;
         background-color: ${theme.colors.accent};
-
-            // @media ${theme.media.tablet} {
-        //     height: 486px;
-        // }
-
+        height: 560px;
+        
     }
 
 

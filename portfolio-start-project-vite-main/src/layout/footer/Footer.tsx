@@ -19,7 +19,7 @@ export const Footer = () => {
             </ListOfSocial>
             <Copyright>Madelyn Torff 2021 </Copyright>
             </Container>
-            <IconSvg iconId={"yellowWave"}  width={"100%"} height={"344"} viewBox={"0 0 1440 344"}/>
+            <IconSvg iconId={"yellowWave"}  width={"auto"} height={"340px"} viewBox={"0 0 1440 344"}/>
         </FooterStyled>
     );
 };
@@ -30,10 +30,14 @@ const FooterStyled = styled.footer`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    
+    position: relative;
+    
     section {
         margin-bottom:0;
     }
+    
+    
     
 `
 
@@ -47,6 +51,7 @@ const Copyright = styled.small`
     font-weight: 400;
     font-size: 16px;
     color: ${theme.colors.fontSecondary};
+    margin-bottom: 80px;
 `
 
 

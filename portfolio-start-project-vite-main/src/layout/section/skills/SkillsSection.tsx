@@ -26,24 +26,46 @@ export const SkillsSection = () => {
 };
 
 const SkillsSectionStyled = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: row;
-    max-width: 1200px;
-    row-gap: 75px;
+    //display: flex;
+    //flex-wrap: wrap;
+    //justify-content: space-between;
+    //flex-direction: row;
+    //max-width: 1200px;
+    //row-gap: 75px;
 
-    @media ${theme.media.tablet} {
-        justify-content: flex-start;
-        
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 75px;
+    width: 100%;
+    justify-content: space-between;
+    justify-items: center;
+
+
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    @media screen and (max-width: 800px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    @media screen and (max-width: 700px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 500px) {
+        grid-template-columns: repeat(2, 1fr);
     }
     
-    @media ${theme.media.mobile} {
 
-        justify-content: space-between;
-        
-    }
+        // @media ${theme.media.tablet} {
+    //     justify-content: flex-start;
+    //    
+    // }
+    //
+        // @media ${theme.media.mobile} {
+    //
+    //     justify-content: space-between;
+    //    
+    // }
 
 `
 //

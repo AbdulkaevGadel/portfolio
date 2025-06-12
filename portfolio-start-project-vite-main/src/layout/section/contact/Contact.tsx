@@ -8,7 +8,7 @@ export const Contact = () => {
     return (
         <FlexWrapperSection marginB={"0"}>
             <Container displayF={"flex"} direction={"column"} rGap={"wrap"} aItems={"center"}>
-            <TitleSection title="Contact"/>
+            <TitleSection title="Contact Me"/>
                 <FormStyled>
                     <label htmlFor="name">Name</label>
                     <Field id="name"/>
@@ -72,7 +72,6 @@ const FormStyled = styled.form `
 
 `
 const Field = styled.input `
-
 `
 
 

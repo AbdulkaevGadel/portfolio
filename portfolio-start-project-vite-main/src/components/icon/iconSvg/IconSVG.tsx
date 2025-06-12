@@ -1,5 +1,6 @@
 import socialSvg from "../../../assets/svg/skillsSvg-sprite/svg-spite.svg";
 import styled from "styled-components";
+import {theme} from "../../../styles/theme/Theme.ts";
 
 type IconLinkPropsType = {
     iconId: string
@@ -17,5 +18,23 @@ export const IconSvg = (props:IconLinkPropsType) => {
 };
 
 const IconStyled = styled.svg `
-  
+
+    position: absolute;
+    top:-10px;
+    
+    
+    @media screen and (max-width: 1000px) {
+        position: static;
+        height: 250px;
+    }
+    @media screen and (max-width: 900px) {
+        height: 100px;
+    }
+    
+    
+    
+    @media ${theme.media.mobile} {
+        height: 98px;
+        position: static;
+    }
 `

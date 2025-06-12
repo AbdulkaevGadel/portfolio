@@ -36,7 +36,7 @@ const StyledNavigation = styled.nav<StyledNavigationPropsType>`
         padding: 14px 0;
     }
     
-    @media ${theme.media.mobile} {
+    @media ${theme.media.tablet} {
         display: none;
     }
 `

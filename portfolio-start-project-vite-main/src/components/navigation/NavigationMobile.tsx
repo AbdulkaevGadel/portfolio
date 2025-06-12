@@ -49,7 +49,7 @@ const StyledNavigation = styled.nav<StyledNavigationPropsType>`
 
     height: 42px;
     
-    @media ${theme.media.mobile} {
+    @media ${theme.media.tablet} {
         display: block;
     }
     
@@ -69,6 +69,10 @@ const BurgerButton = styled.button<BurgerButtonPropsType> `
 
         ${props => props.isOpen && css<BurgerButtonPropsType>`
             background-color: ${theme.colors.primaryBg};
+            
+            @media ${theme.media.tablet} {
+                background-color: ${theme.colors.accent};
+            }
 
 
         `}
@@ -124,10 +128,20 @@ const MobileMenuPopup = styled.div<BurgerButtonPropsType> `
        display: flex;
         justify-content: center;
         align-items: center;
+
+        @media ${theme.media.tablet} {
+            top: 97%;
+            right: -37%;
+
+        }
+        
+        @media screen and (max-width: 470px){
+
+            right: -24%;
+        }
         
         @media ${theme.media.mobile}{
-            top: 101%;
-            left: 70%;
+            right: -18%;
         }
         
     `}
@@ -137,7 +151,6 @@ const MobileMenuPopup = styled.div<BurgerButtonPropsType> `
         
         @media ${theme.media.tablet} {
             
-            background-color:${theme.colors.accent};
             
         }
         

@@ -29,7 +29,6 @@ type ContainerPropsType = {
      max-width: ${props => props.maxW || "1230px"};
      width: 100%;
      min-height: 100%;
-     padding: ${props => props.padding || "0 15px"};
      outline: 1px solid red;
      display: ${props => props.displayF || undefined};
      flex-direction: ${props => props.direction || undefined};
@@ -37,9 +36,8 @@ type ContainerPropsType = {
      align-items: ${props => props.aItems || undefined};
      position: ${props => props.position || undefined};
      
-     // @media ${theme.media.tablet} {
-     //     width: 100%;
-     //     justify-content: center;
-     // }
+     @media ${theme.media.tablet} {
+         padding: ${props => props.padding || "0 15px"};
+     }
 
  `
